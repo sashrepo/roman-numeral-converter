@@ -5,6 +5,15 @@ public class ErrorResponseDTO
     private int statusCode;
     private String errorMessage;
 
+    @Override
+    public String toString()
+    {
+        return "{" +
+                "statusCode=" + statusCode +
+                ", errorMessage='" + errorMessage + '\'' +
+                '}';
+    }
+
     public ErrorResponseDTO()
     {
     }

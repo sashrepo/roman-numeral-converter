@@ -5,6 +5,15 @@ public class RomanNumeralResponseDTO
     private String input;
     private String output;
 
+    @Override
+    public String toString()
+    {
+        return "{" +
+                "input='" + input + '\'' +
+                ", output='" + output + '\'' +
+                '}';
+    }
+
     public RomanNumeralResponseDTO()
     {
     }
