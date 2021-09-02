@@ -86,3 +86,19 @@ services:
       interval: 10s
       retries: 12
       test: curl --write-out 'HTTP %{http_code}' --fail --silent --output /dev/null http://localhost:8200/
+
+  prometheus:
+    image: prom/prometheus
+    hostname: prometheus
+    ports:
+      - 9090:9090
+    volumes:
+      - ./prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
+
+  grafana:
+    image: grafana/grafana
+    hostname: grafana
+    depends_on:
+      - prometheus
+    ports:
+      - 3000:3000
