@@ -1,5 +1,10 @@
 package com.converter.romannumeral.web.dto;
 
+/**
+ * Error Response DTO for RomanNumeralConverterController.convertIntegerToRomanNumeral
+ *
+ * @author sselvaraj
+ */
 public class ErrorResponseDTO
 {
     private int statusCode;

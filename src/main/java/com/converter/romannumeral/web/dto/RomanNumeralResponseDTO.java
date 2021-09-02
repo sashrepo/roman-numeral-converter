@@ -1,5 +1,10 @@
 package com.converter.romannumeral.web.dto;
 
+/**
+ * Response DTO for RomanNumeralConverterController.convertIntegerToRomanNumeral
+ *
+ * @author sselvaraj
+ */
 public class RomanNumeralResponseDTO
 {
     private String input;

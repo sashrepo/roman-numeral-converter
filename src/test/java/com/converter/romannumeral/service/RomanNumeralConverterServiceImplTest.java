@@ -3,9 +3,14 @@ package com.converter.romannumeral.service;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+/**
+ * Unit tests - To validate integer to roman numeral conversion logic,
+ * since error cases are validated and expelled at controller layet, error test cases are not included here to avoid duplicate tests
+ *
+ * @author sselvaraj
+ */
 class RomanNumeralConverterServiceImplTest
 {
-
     @Test
     void convertIntegerToRomanNumeral_Success()
     {
