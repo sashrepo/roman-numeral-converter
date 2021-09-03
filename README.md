@@ -11,6 +11,8 @@ into it's respective roman numeral representation.
 - [Packaging Layout](#packaging-layout)
 - [How to build and deploy the stack?](#how-to-build-and-deploy-the-stack)
 - [Setting up the Environment](#setting-up-the-environment)
+- [Testing](#testing)
+- [Performance Testing](#simple-performance-testing-results-using-apache-bend)
 
 ## Frameworks and Technologies Used
 
@@ -191,6 +193,14 @@ IntegerToRomanNumeralConversionAT
 - testIntegerToRomanNumeralConversion_ValidationError_OutOfRange - Error case to validate out of range conversions. Valid range 1 to 3999
 - testIntegerToRomanNumeralConversion_ValidationError_InvalidDataType - Error case to validate invalid data type inputs. Valid data type int, range 1 to 3999
 ```
+
+## Simple Performance testing results using Apache Bend
+
+![img_14.png](images/Apache_Bend_Mini_Performance_Testing.png)
+
+
+
+
 
 
 
