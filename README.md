@@ -13,6 +13,7 @@ into it's respective roman numeral representation.
 - [Setting up the Environment](#setting-up-the-environment)
 - [Testing](#testing)
 - [Performance Testing](#simple-performance-testing-results-using-apache-bend)
+- [How to un-install Stack?](#how-to-un-install-stack)
 - [Issue Tracker](#issue-tracker)
 - [References](#references)
 
@@ -26,6 +27,7 @@ into it's respective roman numeral representation.
 * ELK (ElasticSearch, Logstash, Kibana)
 * Prometheus
 * Grafana
+* Shell scripting
 * Docker
 
 ## Architecture
@@ -56,6 +58,7 @@ mvn -v
 3. For convenience to run the application, I have bundled all the required commands in one shell script, you can just
    run the shell script or run individual commands in the shell script by yourself to start the whole application stack
    along with the devops capabilities as shown in the architecture diagram,
+   (Assuming that you're in the root directory of the application git repo, run the below commands)
 
 ```
 cd docker
@@ -199,6 +202,18 @@ IntegerToRomanNumeralConversionAT
 ## Simple Performance testing results using Apache Bend
 
 ![img_14.png](images/Apache_Bend_Mini_Performance_Testing.png)
+
+## How to un-install Stack?
+
+For convenience to un-install the application, I have bundled the required commands in one shell script, you can just
+run the shell script or run individual commands in the shell script by yourself to stop the whole application stack
+along with the devops capabilities,
+(Assuming that you're in the root directory of the application git repo)
+
+```
+cd docker
+sh stopWholeStack.sh
+```
 
 ## Issue Tracker
 
