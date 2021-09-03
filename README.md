@@ -13,6 +13,8 @@ into it's respective roman numeral representation.
 - [Setting up the Environment](#setting-up-the-environment)
 - [Testing](#testing)
 - [Performance Testing](#simple-performance-testing-results-using-apache-bend)
+- [Issue Tracker](#issue-tracker)
+- [References](#references)
 
 ## Frameworks and Technologies Used
 
@@ -197,6 +199,18 @@ IntegerToRomanNumeralConversionAT
 ## Simple Performance testing results using Apache Bend
 
 ![img_14.png](images/Apache_Bend_Mini_Performance_Testing.png)
+
+## Issue Tracker
+
+- [Elasticsearch container will crash under default Docker for Mac configuration](https://github.com/10up/wp-local-docker/issues/6)
+
+## References
+
+1. [Roman Numeral Wikipedia Reference](https://simple.wikipedia.org/wiki/Roman_numerals)
+2. [spring-boot](https://spring.io/projects/spring-boot)
+3. [docker-compose](https://docs.docker.com/compose/)
+4. [ELK Stack](https://www.elastic.co/webinars/getting-started-elasticsearch)
+5. [Prometheus & Grafana](https://grafana.com/docs/grafana/latest/getting-started/getting-started-prometheus/)
 
 
 
