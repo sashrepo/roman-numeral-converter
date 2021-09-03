@@ -11,6 +11,7 @@ into it's respective roman numeral representation.
 - [Packaging Layout](#packaging-layout)
 - [How to build and deploy the stack?](#how-to-build-and-deploy-the-stack)
 - [Setting up the Environment](#setting-up-the-environment)
+- [Sample API Request/Responses](#sample-api-requestresponses)
 - [Testing](#testing)
 - [Performance Testing](#simple-performance-testing-results-using-apache-bend)
 - [How to un-install Stack?](#how-to-un-install-stack)
@@ -139,6 +140,40 @@ Select roman-numeral-converter to view it's APM,
 
 5. Once it is loaded, Grafana dashboard will be up and running with JVM metrics as shown below,
    ![img_13.png](images/grafana-setup/Grafana_6_dashboard.png)
+
+## Sample API Request/Responses
+
+### Successful Request
+
+```
+curl -X GET "http://localhost:8080/romannumeral?query=100" -H "accept: application/json"
+```
+
+### Successful Response
+
+```
+Http Status Code - 200
+{
+  "input": "100",
+  "output": "C"
+}
+```
+
+### Error Request
+
+```
+curl -X GET "http://localhost:8080/romannumeral?query=4000" -H "accept: application/json"
+```
+
+### Error Response
+
+```
+Http Status Code - 400
+{
+  "statusCode": 400,
+  "errorMessage": "Invalid input, enter an integer value in the range from 1 to 3999"
+}
+```
 
 ## Testing
 

@@ -46,7 +46,7 @@ public class RomanNumeralConverterController
     @RequestMapping(method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
     @ApiOperation(value = "GET endpoint that accepts an int request and responds with the converted romannumeral in JSON format", response = RomanNumeralResponseDTO.class)
     @ApiResponses(value = {
-            @ApiResponse(code = 200, message = "Successfull"),
+            @ApiResponse(code = 200, message = "Successful"),
             @ApiResponse(code = 400, message = ErrorMessage.INPUT_TYPE_MISMATCH),
             @ApiResponse(code = 400, message = ErrorMessage.INVALID_DATA),
             @ApiResponse(code = 500, message = ErrorMessage.INTERNAL_SERVER_ERROR)
