@@ -133,6 +133,66 @@ Select roman-numeral-converter to view it's APM,
 5. Once it is loaded, Grafana dashboard will be up and running with JVM metrics as shown below,
    ![img_13.png](images/grafana-setup/Grafana_6_dashboard.png)
 
+## Testing
+
+### Health check
+
+> http://localhost:8080/actuator/health
+
+### Sample test
+
+> http://localhost:8080/romannumeral?query=3999
+
+Output:
+
+```
+{
+"input": "3999",
+"output": "MMMCMXCIX"
+}
+```
+
+### Run Unit/Integration tests
+
+From application root directory, run
+> mvn clean install
+
+```
+Test Cases:
+
+RomanNumeralConverterControllerTest
+- convertIntegerToRomanNumeral_Success - Happy day flow
+- convertIntegerToRomanNumeral_lessThanMinError - input number less than min value < 1
+- convertIntegerToRomanNumeral_greaterThanMaxError - input number greater than max value > 3999
+- convertIntegerToRomanNumeral_inputTypeMismatchError - input value not a valid int number - eg: String value like "plsFail"
+- convertIntegerToRomanNumeral_internalServerError - simulating RuntimeException
+
+RomanNumeralConverterServiceImplTest
+- convertIntegerToRomanNumeral_Success - multiple happy day assertions
+
+```
+
+### Run Acceptance tests
+
+1. Acceptance tests that can be integrated into the CI/CD pipeline with test cases required to certify the application
+   ready for deployment to next stage
+2. For this, make sure the application is running, because these tests are executed against the running application,
+   simulating a real world flow
+3. Use the below command, to run the acceptance tests,
+
+> mvn test -Dtest=IntegerToRomanNumeralConversionAT
+
+```
+Acceptance Test Cases
+
+IntegerToRomanNumeralConversionAT
+- testDefaultContentTypeIsJson - Validate response content type is application/jso
+- testIntegerToRomanNumeralConversion_Success - Happy day case to validate conversion of a valid int to roman numeral
+- testIntegerToRomanNumeralConversion_ValidationError_OutOfRange - Error case to validate out of range conversions. Valid range 1 to 3999
+- testIntegerToRomanNumeralConversion_ValidationError_InvalidDataType - Error case to validate invalid data type inputs. Valid data type int, range 1 to 3999
+```
+
+
 
 
 

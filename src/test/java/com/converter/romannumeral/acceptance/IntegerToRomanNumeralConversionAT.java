@@ -40,14 +40,11 @@ public class IntegerToRomanNumeralConversionAT
     @Test
     public void testDefaultContentTypeIsJson() throws IOException
     {
-        // Given
         String expectedContentType = "application/json";
         HttpUriRequest request = new HttpGet("http://localhost:8080/romannumeral?query=3999");
 
-        // When
         HttpResponse response = HttpClientBuilder.create().build().execute(request);
 
-        // Then
         Assertions.assertEquals(expectedContentType, ContentType.getOrDefault(response.getEntity()).getMimeType());
     }
 
